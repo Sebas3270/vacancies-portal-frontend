@@ -1,0 +1,1 @@
+export type { VacanciesResponse, Vacancy, VacancyFilters } from './vacancies'

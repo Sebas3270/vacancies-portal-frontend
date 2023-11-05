@@ -1,0 +1,1 @@
+export { getVacancies } from "./vacancies";
