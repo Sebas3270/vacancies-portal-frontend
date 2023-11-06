@@ -47,6 +47,6 @@ export async function getVacancies(filters: VacancyFilters): Promise<VacanciesRe
 export async function getVacancy(id: string) {
     let url = new URL(`http://127.0.0.1:8000/api/vacancies/${id}`);
     const res = await fetch(url.toString());
-    const resJson = await res.json() as { vacancy: Vacancy, candidates: number };
+    const resJson = await res.json() as { vacancy: Vacancy | undefined, candidates: number };
     return resJson;
 }

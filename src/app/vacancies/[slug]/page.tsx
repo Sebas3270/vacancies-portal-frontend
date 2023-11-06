@@ -1,20 +1,22 @@
-import React from 'react'
 import { getVacancy } from '@/database'
-import { NextPageProps } from '@/types';
+import { NextPageProps } from '@/types'
+import { notFound } from 'next/navigation';
+import React from 'react'
 
 interface Props extends NextPageProps {
-    params: { slug: string }
+    params: { slug: string } 
 }
 
 export default async function Page(props: Props) {
 
-    const slug = props.params.slug;
+    const { vacancy } = await getVacancy(props.params.slug);
 
-    const { vacancy } = await getVacancy(slug);
+    if(!vacancy) notFound();
 
     return (
         <div>
-            <h1>{vacancy.title}</h1>
+            <h1 className='text-2xl font-bold'>{vacancy.title}</h1>
+            <p className='text-sm mt-2'>{vacancy.description}</p>
         </div>
     )
 }
