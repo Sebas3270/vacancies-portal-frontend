@@ -1,5 +1,6 @@
 export interface VacanciesResponse {
     resPerPage: number;
+    totalPages: number;
     count:      number;
     vacancies:  Vacancy[];
 }
