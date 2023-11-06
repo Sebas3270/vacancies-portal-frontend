@@ -1,6 +1,8 @@
 # Vacancies Portal Frontend
 
-A vacancies portal developed with Next js (React metaframework) and Typescript, it consumes data from this [django backend](https://github.com/Sebas3270/vacancies-portal-backend), also developed by me.
+A vacancies portal developed with Next js (React metaframework) and Typescript, it consumes data from this [django backend](https://github.com/Sebas3270/vacancies-portal-backend), also developed by me. 
+
+__Note:__ I am redoing this project as the new version of NextJs (v14) has just been released, so the whole project is being redone from 0 to follow the best practices for this new version.
 
 You can filter the vacancies, apply to them, create you account, upload your cv, etc.
 
