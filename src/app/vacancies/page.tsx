@@ -19,8 +19,7 @@ export default async function Page(props: NextPageProps) {
   const { vacancies, count, resPerPage, totalPages } = await getVacancies({ page, keyword, education, location, vacancyType });
 
   return (
-    <div className='h-auto'>
-
+    <div className='min-h-screen bg-slate-50'>
       <h1 className='text-3xl font-bold mb-4'>Vacancies</h1>
       <VacancyList vacancies={vacancies}/>
       <VacanciesPagination currentPage={Number(page)} totalPages={totalPages}/>
